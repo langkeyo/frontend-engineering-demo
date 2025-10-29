@@ -20,6 +20,5 @@ function render() {
     render()
   })
 }
-const 1231
 
 render()
