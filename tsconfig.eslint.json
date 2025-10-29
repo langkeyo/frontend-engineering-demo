@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.vue",
+    "vite.config.ts",
+    ".eslintrc.js" // 如果您的 ESLint 配置也是 JS/TS 文件，也需要包含
+  ]
+}
