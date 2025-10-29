@@ -1,5 +1,4 @@
 import './style.css' // 导入CSS（Vite支持直接导入）
-console.log(13213)
 const app = document.getElementById('app')
 let isDarkMode = false // 用于切换深色模式
 

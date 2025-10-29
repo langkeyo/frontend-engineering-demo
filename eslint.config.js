@@ -11,8 +11,7 @@ export default defineConfig([
     files: ['**/*.{js,mjs,cjs}'],
     plugins: { js },
     extends: ['js/recommended'],
-    languageOptions: { globals: globals.browser },
-    prettier //  放在最后，覆盖冲突规则
+    languageOptions: { globals: globals.browser }
   },
   {
     files: ['**/*.json'],
@@ -37,5 +36,6 @@ export default defineConfig([
     plugins: { css },
     language: 'css/css',
     extends: ['css/recommended']
-  }
+  },
+  prettier
 ])
