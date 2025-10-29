@@ -1,0 +1,39 @@
+{
+  "name": "frontend-engineering-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "lint-staged": {
+    "src/**/*.{js,css,html}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint src/**/*.js --fix",
+    "format": "prettier --write src/**/*.{js,css,html}",
+    "preview": "serve dist",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@eslint/css": "^0.14.0",
+    "@eslint/js": "^9.38.0",
+    "@eslint/json": "^0.13.2",
+    "@eslint/markdown": "^7.5.0",
+    "eslint": "^9.38.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.4.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
+    "prettier": "^3.6.2",
+    "serve": "14.2.5",
+    "vite": "^7.1.12"
+  }
+}
