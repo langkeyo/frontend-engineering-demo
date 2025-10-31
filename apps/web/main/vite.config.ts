@@ -38,7 +38,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src') // 配置路径别名
-    }
+      '@': resolve(__dirname, './src') // 配置路径别名
+    },
+    extensions: ['.vue', '.ts', '.js', '.json']
   }
 })

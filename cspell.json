@@ -1,0 +1,94 @@
+{
+  "import": ["@cspell/dict-lorem-ipsum/cspell-ext.json"],
+  "caseSensitive": false,
+  "dictionaries": ["custom-dictionary"],
+  "dictionaryDefinitions": [
+    {
+      "name": "custom-dictionary",
+      "path": "./.cspell/custom-dictionary.txt",
+      "addWords": true
+    }
+  ],
+  // 忽略无需拼写检查的路径/文件（覆盖前端项目常见场景）
+  "ignorePaths": [
+    // 依赖与构建产物
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/out/**",
+    "**/vendor/**",
+    "**/lib/**", // 去重，保留一个即可
+
+    // 版本控制与IDE配置
+    "**/.git/**",
+    "**/.github/**",
+    "**/.gitignore",
+    "**/.gitattributes",
+    "**/.vscode/**",
+    "**/.idea/**",
+    "**/.editorconfig",
+
+    // 临时文件与缓存
+    "**/tmp/**",
+    "**/temp/**",
+    "**/.tmp/**",
+    "**/.cache/**",
+    "**/coverage/**", // 测试覆盖率报告
+    "**/.nyc_output/**", // 测试覆盖率相关
+
+    // 日志与备份
+    "**/logs/**",
+    "**/*.log",
+    "**/*.bak", // 备份文件
+    "**/*.swp", // Vim临时文件
+
+    // 锁文件与配置文件
+    "**/pnpm-lock.yaml",
+    "**/package-lock.json",
+    "**/yarn.lock",
+    "**/tsconfig.json",
+    "**/vite.config.ts",
+    "**/.eslintrc.js",
+    "**/.prettierrc",
+    "**/tailwind.config.js",
+
+    // 二进制/媒体文件
+    "**/*.png",
+    "**/*.jpg",
+    "**/*.jpeg",
+    "**/*.gif",
+    "**/*.bmp",
+    "**/*.svg", // 矢量图（通常含非文本内容）
+    "**/*.mp4",
+    "**/*.mp3",
+    "**/*.pdf",
+    "**/*.zip",
+    "**/*.tar.gz",
+    "**/*.exe",
+
+    // 其他无需检查的文件类型
+    "**/*.min.js", // 压缩后的JS（可能混淆）
+    "**/*.d.ts", // 类型声明文件（自动生成，较少拼写问题）
+    "**/*.sql", // 数据库脚本（关键字较多，易误判）
+    "**/*.mjs",
+    "**/*.cjs"
+  ],
+  // 补充实用配置
+  "language": "en", // 默认检查英语拼写
+  "minWordLength": 3, // 忽略2个字母以下的单词（减少误判，比如缩写"id"、"ui"）
+  "words": [
+    // 常见的自定义词汇
+    "Vue",
+    "Vite",
+    "pnpm",
+    "eslint",
+    "prettier",
+    "Monorepo",
+    "tsconfig"
+  ],
+  "ignoreWords": [
+    // 明确忽略的单词
+    "Lorem",
+    "ipsum" // 忽略占位文本的拼写检查
+  ]
+}
